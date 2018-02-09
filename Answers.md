@@ -2,16 +2,19 @@
 
 
 2. The possible states of a process are as follows:
-    1. Ready or Waiting - This state is when the process has
+    1. Created or New - This state occurs when a process is
+    newly created and awaiting permission from the scheduler
+    to enter the ready state.
+    2. Ready or Waiting - This state is when the process has
     been loaded into main memory and is waiting for execution
     by the CPU.
-    2. Running - The process moves to this state when the CPU
+    3. Running - The process moves to this state when the CPU
     chooses it for execution. The process instructions are then
     executed by one of the system's cores, either in kernel or
     user mode.
-    3. Blocked - When a process cannot carry on without an 
+    4. Blocked - When a process cannot carry on without an 
     external change in state or an event occuring. 
-    4. Terminated - A process can be terminated by either 
+    5. Terminated - A process can be terminated by either 
     completing it's execution or by being killed. The process
     is no longer running, but it remains in the process table
     as a zombie process until it's parent calls the wait system call. 
